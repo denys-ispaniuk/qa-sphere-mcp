@@ -49,8 +49,7 @@ export const endpoints = {
 
   // Test Plans
   testPlans: {
-    list: (projectId: string) => `/project/${projectId}/plan`,
-    get: (projectId: string, planId: string) => `/project/${projectId}/plan/${planId}`,
+    // Note: Public API only supports creating test plans, not listing or getting them
     create: (projectId: string) => `/project/${projectId}/plan`,
   },
 
