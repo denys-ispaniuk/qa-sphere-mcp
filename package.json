@@ -1,11 +1,11 @@
 {
-  "name": "qasphere-mcp",
-  "version": "0.1.0",
+  "name": "qasphere-mcp-server",
+  "version": "1.0.0",
   "description": "Model Context Protocol (MCP) server for QA Sphere test management integration. Complete CRUD operations for test cases, folders, tags, and more.",
   "main": "dist/index.js",
   "type": "module",
   "bin": {
-    "qasphere-mcp": "./dist/index.js"
+    "qasphere-mcp": "dist/index.js"
   },
   "files": [
     "dist",

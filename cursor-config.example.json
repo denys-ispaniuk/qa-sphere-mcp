@@ -2,7 +2,7 @@
   "mcpServers": {
     "qasphere": {
       "command": "npx",
-      "args": ["-y", "qasphere-mcp"],
+      "args": ["-y", "qasphere-mcp-server"],
       "env": {
         "QASPHERE_API_KEY": "your-api-key-here",
         "QASPHERE_BASE_URL": "https://your-company.your-region.qasphere.com/api/public/v0"

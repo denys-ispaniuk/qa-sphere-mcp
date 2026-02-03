@@ -17,13 +17,13 @@ A complete Model Context Protocol (MCP) server for QA Sphere integration with fu
 ### Using with npx (Recommended - No installation needed)
 
 ```bash
-npx -y qasphere-mcp
+npx -y qasphere-mcp-server
 ```
 
 ### Global Installation
 
 ```bash
-npm install -g qasphere-mcp
+npm install -g qasphere-mcp-server
 ```
 
 ## 🚀 Quick Setup with Cursor
@@ -48,7 +48,7 @@ npm install -g qasphere-mcp
   "mcpServers": {
     "qasphere": {
       "command": "npx",
-      "args": ["-y", "qasphere-mcp"],
+      "args": ["-y", "qasphere-mcp-server"],
       "env": {
         "QASPHERE_API_KEY": "your-api-key-here",
         "QASPHERE_BASE_URL": "https://your-company.your-region.qasphere.com/api/public/v0"
