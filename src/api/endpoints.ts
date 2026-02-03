@@ -11,7 +11,7 @@ export const endpoints = {
 
   // Test Cases
   testCases: {
-    list: (projectId: string) => `/project/${projectId}/tcases`,
+    list: (projectId: string) => `/project/${projectId}/tcase`,
     get: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}`,
     create: (projectId: string) => `/project/${projectId}/tcase`,
     update: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}`,
@@ -24,11 +24,11 @@ export const endpoints = {
 
   // Folders
   folders: {
-    list: (projectId: string) => `/project/${projectId}/folder`,
-    get: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
-    create: (projectId: string) => `/project/${projectId}/folder`,
-    update: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
-    delete: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
+    list: (projectId: string) => `/project/${projectId}/tcase/folders`,
+    get: (projectId: string, folderId: string) => `/project/${projectId}/tcase/folder/${folderId}`,
+    create: (projectId: string) => `/project/${projectId}/tcase/folder`,
+    update: (projectId: string, folderId: string) => `/project/${projectId}/tcase/folder/${folderId}`,
+    delete: (projectId: string, folderId: string) => `/project/${projectId}/tcase/folder/${folderId}`,
   },
 
   // Tags
@@ -41,10 +41,10 @@ export const endpoints = {
 
   // Preconditions
   preconditions: {
-    list: (projectId: string) => `/project/${projectId}/shared_precondition`,
-    create: (projectId: string) => `/project/${projectId}/shared_precondition`,
+    list: (projectId: string) => `/project/${projectId}/shared-precondition`,
+    create: (projectId: string) => `/project/${projectId}/shared-precondition`,
     update: (projectId: string, preconditionId: string) => 
-      `/project/${projectId}/shared_precondition/${preconditionId}`,
+      `/project/${projectId}/shared-precondition/${preconditionId}`,
   },
 
   // Test Plans
