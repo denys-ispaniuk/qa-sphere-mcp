@@ -34,19 +34,19 @@ class Logger {
 
   debug(message: string, data?: unknown): void {
     if (this.shouldLog('debug')) {
-      console.debug(this.formatMessage('debug', message, data));
+      process.stderr.write(this.formatMessage('debug', message, data) + '\n');
     }
   }
 
   info(message: string, data?: unknown): void {
     if (this.shouldLog('info')) {
-      console.info(this.formatMessage('info', message, data));
+      process.stderr.write(this.formatMessage('info', message, data) + '\n');
     }
   }
 
   warn(message: string, data?: unknown): void {
     if (this.shouldLog('warn')) {
-      console.warn(this.formatMessage('warn', message, data));
+      process.stderr.write(this.formatMessage('warn', message, data) + '\n');
     }
   }
 
@@ -55,7 +55,7 @@ class Logger {
       const errorData = error instanceof Error 
         ? { message: error.message, stack: error.stack }
         : error;
-      console.error(this.formatMessage('error', message, errorData));
+      process.stderr.write(this.formatMessage('error', message, errorData) + '\n');
     }
   }
 }

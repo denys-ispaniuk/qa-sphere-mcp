@@ -31,16 +31,16 @@ async function main() {
     logger.error('Failed to start QA Sphere MCP Server', error);
     
     if (error instanceof Error) {
-      console.error(`\n❌ Error: ${error.message}\n`);
-      
+      process.stderr.write(`\n❌ Error: ${error.message}\n`);
+
       if (error.message.includes('QASPHERE_API_KEY')) {
-        console.error('Please set the QASPHERE_API_KEY environment variable.');
-        console.error('Example: export QASPHERE_API_KEY=your-api-key\n');
+        process.stderr.write('Please set the QASPHERE_API_KEY environment variable.\n');
+        process.stderr.write('Example: export QASPHERE_API_KEY=your-api-key\n\n');
       }
-      
+
       if (error.message.includes('QASPHERE_BASE_URL')) {
-        console.error('Please set the QASPHERE_BASE_URL environment variable.');
-        console.error('Example: export QASPHERE_BASE_URL=https://your-company.your-region.qasphere.com/api/public/v0\n');
+        process.stderr.write('Please set the QASPHERE_BASE_URL environment variable.\n');
+        process.stderr.write('Example: export QASPHERE_BASE_URL=https://your-company.your-region.qasphere.com/api/public/v0\n\n');
       }
     }
     
