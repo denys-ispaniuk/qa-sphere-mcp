@@ -15,7 +15,7 @@ export class QASphereClient {
       timeout: config.requestTimeout,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${config.apiKey}`,
+        'Authorization': `ApiKey ${config.apiKey}`,
       },
     });
 

@@ -5,60 +5,60 @@
 export const endpoints = {
   // Projects
   projects: {
-    list: '/projects',
-    get: (id: string) => `/projects/${id}`,
+    list: '/project',
+    get: (id: string) => `/project/${id}`,
   },
 
   // Test Cases
   testCases: {
-    list: (projectId: string) => `/projects/${projectId}/cases`,
-    get: (projectId: string, caseId: string) => `/projects/${projectId}/cases/${caseId}`,
-    create: (projectId: string) => `/projects/${projectId}/cases`,
-    update: (projectId: string, caseId: string) => `/projects/${projectId}/cases/${caseId}`,
-    delete: (projectId: string, caseId: string) => `/projects/${projectId}/cases/${caseId}`,
+    list: (projectId: string) => `/project/${projectId}/tcases`,
+    get: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}`,
+    create: (projectId: string) => `/project/${projectId}/tcase`,
+    update: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}`,
+    delete: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}`,
     steps: {
-      list: (projectId: string, caseId: string) => `/projects/${projectId}/cases/${caseId}/steps`,
-      create: (projectId: string, caseId: string) => `/projects/${projectId}/cases/${caseId}/steps`,
+      list: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}/steps`,
+      create: (projectId: string, caseId: string) => `/project/${projectId}/tcase/${caseId}/steps`,
     },
   },
 
   // Folders
   folders: {
-    list: (projectId: string) => `/projects/${projectId}/folders`,
-    get: (projectId: string, folderId: string) => `/projects/${projectId}/folders/${folderId}`,
-    create: (projectId: string) => `/projects/${projectId}/folders`,
-    update: (projectId: string, folderId: string) => `/projects/${projectId}/folders/${folderId}`,
-    delete: (projectId: string, folderId: string) => `/projects/${projectId}/folders/${folderId}`,
+    list: (projectId: string) => `/project/${projectId}/folder`,
+    get: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
+    create: (projectId: string) => `/project/${projectId}/folder`,
+    update: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
+    delete: (projectId: string, folderId: string) => `/project/${projectId}/folder/${folderId}`,
   },
 
   // Tags
   tags: {
-    list: (projectId: string) => `/projects/${projectId}/tags`,
-    create: (projectId: string) => `/projects/${projectId}/tags`,
-    update: (projectId: string, tagId: string) => `/projects/${projectId}/tags/${tagId}`,
-    delete: (projectId: string, tagId: string) => `/projects/${projectId}/tags/${tagId}`,
+    list: (projectId: string) => `/project/${projectId}/tag`,
+    create: (projectId: string) => `/project/${projectId}/tag`,
+    update: (projectId: string, tagId: string) => `/project/${projectId}/tag/${tagId}`,
+    delete: (projectId: string, tagId: string) => `/project/${projectId}/tag/${tagId}`,
   },
 
   // Preconditions
   preconditions: {
-    list: (projectId: string) => `/projects/${projectId}/preconditions`,
-    create: (projectId: string) => `/projects/${projectId}/preconditions`,
+    list: (projectId: string) => `/project/${projectId}/shared_precondition`,
+    create: (projectId: string) => `/project/${projectId}/shared_precondition`,
     update: (projectId: string, preconditionId: string) => 
-      `/projects/${projectId}/preconditions/${preconditionId}`,
+      `/project/${projectId}/shared_precondition/${preconditionId}`,
   },
 
   // Test Plans
   testPlans: {
-    list: (projectId: string) => `/projects/${projectId}/plans`,
-    get: (projectId: string, planId: string) => `/projects/${projectId}/plans/${planId}`,
-    create: (projectId: string) => `/projects/${projectId}/plans`,
+    list: (projectId: string) => `/project/${projectId}/plan`,
+    get: (projectId: string, planId: string) => `/project/${projectId}/plan/${planId}`,
+    create: (projectId: string) => `/project/${projectId}/plan`,
   },
 
   // Requirements
   requirements: {
-    list: (projectId: string) => `/projects/${projectId}/requirements`,
-    get: (projectId: string, reqId: string) => `/projects/${projectId}/requirements/${reqId}`,
+    list: (projectId: string) => `/project/${projectId}/requirement`,
+    get: (projectId: string, reqId: string) => `/project/${projectId}/requirement/${reqId}`,
     linkToCase: (projectId: string, caseId: string) => 
-      `/projects/${projectId}/cases/${caseId}/links/requirements`,
+      `/project/${projectId}/tcase/${caseId}/requirement`,
   },
 };
