@@ -32,7 +32,7 @@ const listTestCasesTool: MCPTool = {
         description: 'The ID of the project',
       },
       folderId: {
-        type: 'string',
+        type: 'number',
         description: 'Optional: Filter by folder ID',
       },
       page: {
@@ -51,7 +51,7 @@ const listTestCasesTool: MCPTool = {
     
     const { projectId, folderId, page, pageSize } = args as {
       projectId: string;
-      folderId?: string;
+      folderId?: number;
       page?: number;
       pageSize?: number;
     };
@@ -131,7 +131,7 @@ const createTestCaseTool: MCPTool = {
         description: 'Optional: Description of the test case',
       },
       folderId: {
-        type: 'string',
+        type: 'number',
         description: 'Optional: ID of the folder to place the test case in',
       },
       priority: {
